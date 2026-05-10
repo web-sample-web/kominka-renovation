@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>無料相談｜古民家工房 田中建設</title>
+  <meta name="description" content="古民家リノベーションの無料相談・お問い合わせ。現地調査まで費用ゼロ。お気軽にどうぞ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* フォームラッパー */
+    .form-wrapper {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 36px 40px;
+      box-shadow: var(--shadow);
+    }
+    .form-wrapper h2 {
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+      letter-spacing: 0.08em;
+    }
+    .form-wrapper .form-lead {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .form-submit {
+      text-align: center;
+      margin-top: 8px;
+    }
+    .form-submit .btn {
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+    }
+    .form-privacy {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: var(--color-text-light);
+      text-align: center;
+      margin-top: 12px;
+    }
+    /* 送信完了メッセージ */
+    #form-success {
+      display: none;
+      background: #F0F8E8;
+      border: 1px solid #A8D08D;
+      border-radius: 6px;
+      padding: 28px;
+      text-align: center;
+    }
+    #form-success h3 {
+      color: #3D7A2B;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    #form-success p {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      color: var(--color-text-light);
+    }
+
+    /* サイドバー */
+    .contact-sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .info-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .info-card h3 {
+      font-size: 1rem;
+      color: var(--color-primary);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--color-accent);
+    }
+    .info-list {
+      list-style: none;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+    }
+    .info-list li {
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--color-border);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-list li strong { color: var(--color-primary); display: block; font-size: 0.78rem; }
+    .qa-list { list-style: none; }
+    .qa-list li { margin-bottom: 14px; }
+    .qa-q {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--color-primary);
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .qa-q::before { content: 'Q. '; }
+    .qa-a {
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+    .qa-a::before { content: 'A. '; color: #5A8A3C; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-main">古民家工房　田中建設</span>
+      <span class="logo-sub">KOMINKA RENOVATION</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="cases.html">施工事例</a></li>
+        <li><a href="pricing.html">料金・プラン</a></li>
+        <li><a href="contact.html">無料相談</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="contact.html">無料相談はこちら</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>無料相談・お問い合わせ</h1>
+  <p>CONTACT US FREE</p>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="breadcrumb">
+      <a href="index.html">ホーム</a>
+      <span>›</span> 無料相談
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- フォーム -->
+      <div>
+        <div class="form-wrapper">
+          <h2>無料相談フォーム</h2>
+          <p class="form-lead">
+            「まだ検討段階」「古民家があるけどどうすれば…」そんなお悩みもお気軽にどうぞ。<br>
+            通常2営業日以内にご連絡いたします。相談・現地調査は完全無料です。
+          </p>
+
+          <!--
+            【設定手順】Formspree を使ったメール送信
+            1. https://formspree.io にアクセスして無料登録
+            2. 新しいフォームを作成し、エンドポイントURL（https://formspree.io/f/XXXXXXXX）を取得
+            3. 下の action="YOUR_FORMSPREE_ENDPOINT" を取得したURLに書き換える
+          -->
+          <form id="contact-form"
+                action="YOUR_FORMSPREE_ENDPOINT"
+                method="POST"
+                onsubmit="handleSubmit(event)">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>お名前<span class="required">必須</span></label>
+                <input type="text" name="name" placeholder="山田 太郎" required>
+              </div>
+              <div class="form-group">
+                <label>電話番号<span class="required">必須</span></label>
+                <input type="tel" name="phone" placeholder="090-0000-0000" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>メールアドレス<span class="required">必須</span></label>
+              <input type="email" name="email" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>建物の所在地</label>
+                <input type="text" name="location" placeholder="例：京都府亀岡市">
+              </div>
+              <div class="form-group">
+                <label>築年数の目安</label>
+                <select name="age">
+                  <option value="">選択してください</option>
+                  <option>30〜50年</option>
+                  <option>50〜70年</option>
+                  <option>70〜100年</option>
+                  <option>100年以上</option>
+                  <option>不明</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>相談内容<span class="required">必須</span></label>
+              <select name="topic" required>
+                <option value="">選択してください</option>
+                <option>古民家リノベーションの費用を知りたい</option>
+                <option>省エネ・断熱改修について相談したい</option>
+                <option>耐震補強について相談したい</option>
+                <option>補助金が使えるか確認したい</option>
+                <option>古民家の購入・取得からサポートしてほしい</option>
+                <option>その他</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>詳しい内容・ご質問</label>
+              <textarea name="message"
+                        placeholder="お気軽にご記入ください。「まだ検討段階」「とりあえず話を聞きたい」でも大歓迎です。"></textarea>
+            </div>
+
+            <!-- スパム対策（Formspree用） -->
+            <input type="hidden" name="_subject" value="古民家リノベーション 無料相談のお申し込み">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-accent">無料相談を申し込む（送信）</button>
+            </div>
+            <p class="form-privacy">
+              送信内容はSSLで暗号化されます。
+              個人情報はリノベーション相談の目的以外には使用しません。
+            </p>
+          </form>
+
+          <!-- 送信完了メッセージ -->
+          <div id="form-success">
+            <h3>✅ 送信が完了しました</h3>
+            <p>
+              お問い合わせありがとうございます。<br>
+              通常2営業日以内にご連絡いたします。<br>
+              しばらくお待ちください。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- サイドバー -->
+      <aside class="contact-sidebar">
+
+        <div class="info-card">
+          <h3>ご相談の流れ</h3>
+          <ul class="info-list">
+            <li>
+              <strong>① フォーム送信</strong>
+              今すぐ送信できます（24時間受付）
+            </li>
+            <li>
+              <strong>② ご連絡（2営業日以内）</strong>
+              担当者よりご連絡いたします
+            </li>
+            <li>
+              <strong>③ 無料現地調査</strong>
+              建物を拝見し、状態を確認します
+            </li>
+            <li>
+              <strong>④ プラン・見積りご提示</strong>
+              補助金情報も合わせてご説明します
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>よくあるご質問</h3>
+          <ul class="qa-list">
+            <li>
+              <p class="qa-q">相談だけでも大丈夫ですか？</p>
+              <p class="qa-a">もちろんです。「まだ検討段階」の方も大歓迎です。</p>
+            </li>
+            <li>
+              <p class="qa-q">現地調査の費用はかかりますか？</p>
+              <p class="qa-a">完全無料です。お見積りまで一切費用はかかりません。</p>
+            </li>
+            <li>
+              <p class="qa-q">古民家ではなく築30年の家でも相談できますか？</p>
+              <p class="qa-a">はい。築年数に関わらずご相談いただけます。</p>
+            </li>
+            <li>
+              <p class="qa-q">補助金は必ず使えますか？</p>
+              <p class="qa-a">建物の状態・工事内容によります。調査後にご説明します。</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-card" style="background:var(--color-primary);color:var(--color-white);">
+          <h3 style="color:var(--color-cream);border-color:var(--color-accent);">お急ぎの方へ</h3>
+          <p style="font-family:var(--font-sans);font-size:0.85rem;color:#D4A76A;line-height:1.8;">
+            フォームの他にもお電話でのご相談も承っております。<br><br>
+            <strong style="color:var(--color-cream);font-size:1rem;">📞 000-0000-0000</strong><br>
+            <span style="font-size:0.78rem;">平日 9:00〜18:00</span>
+          </p>
+        </div>
+
+      </aside>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <ul class="footer-nav">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="cases.html">施工事例</a></li>
+      <li><a href="pricing.html">料金・プラン</a></li>
+      <li><a href="contact.html">無料相談</a></li>
+    </ul>
+    <p>古民家工房　田中建設　｜　© 2026 Tanaka Construction. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+async function handleSubmit(event) {
+  event.preventDefault();
+  const form = document.getElementById('contact-form');
+  const btn = form.querySelector('button[type="submit"]');
+
+  btn.textContent = '送信中...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    } else {
+      alert('送信に失敗しました。お手数ですが、お電話でご連絡ください。');
+      btn.textContent = '無料相談を申し込む（送信）';
+      btn.disabled = false;
+    }
+  } catch (e) {
+    alert('ネットワークエラーが発生しました。お手数ですが、お電話でご連絡ください。');
+    btn.textContent = '無料相談を申し込む（送信）';
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>
